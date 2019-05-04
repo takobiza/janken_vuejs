@@ -27,7 +27,9 @@
     "sass-loader": "^7.1.0",
     "uglify-js": "^2.5.0",
     "vueify": "^9.1.0",
-    "watchify": "^3.4.0"
+    "watchify": "^3.4.0",
+    "tar": ">=4.4.8",
+    "ecstatic": ">=4.1.2"
   },
   "browserify": {
     "transform": [
