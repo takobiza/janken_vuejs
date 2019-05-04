@@ -40,6 +40,38 @@
         }
     };
 </script>
-<style scoped>
-    /* css（省略）*/
+<style scoped lang="scss">
+    @import url("https://fonts.googleapis.com/earlyaccess/nicomoji.css");
+
+    #app {
+      font-family: "Nico Moji";
+    }
+
+    h1{
+      margin: 25px 0;
+      text-align: center;
+      font-size: 48px;
+    }
+    .nav {
+      text-align: center;
+    }
+    .nav li{
+      display: inline-block;
+      margin-right: 32px;
+    }
+    .nav li a {
+      padding: 5px 15px;
+      font-size: 26px;
+      text-decoration: none;
+      background: #00e8ee;
+      color: #333;
+      &:hover{
+        color: red;
+      }
+    }
+
+    .nav li a.router-link-active {
+      background: #2cb1ee;
+      color: #fff;
+    }
 </style>
