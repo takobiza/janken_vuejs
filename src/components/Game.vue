@@ -7,7 +7,7 @@
         </div>
  
         <div class="imgArea"><img v-bind:src="src" alt=""></div>
-        <ul>
+        <ul class = "buttons">
             <li>
                 <button v-on:click="onSelected" class="button" type="button" value="0">グー</button>
             </li>
@@ -30,11 +30,11 @@
         props: ['scores'],
         data() {
             return {
-                src : 'dist/imgs/choki.png',
+                src : 'dist/imgs/janken_choki.png',
                 imgList: [
-                    'dist/imgs/gu.png',
-                    'dist/imgs/choki.png',
-                    'dist/imgs/par.png'
+                    'dist/imgs/janken_gu.png',
+                    'dist/imgs/janken_choki.png',
+                    'dist/imgs/janken_pa.png'
                 ],
                 timer: null,
                 resultMessage: ''
@@ -112,6 +112,62 @@
         }
     }
 </script>
-<style scoped>
-    /* CSS 省略 */
+<style scoped lang="scss">
+    .imgArea{
+      
+      display: flex;
+      width: 298px;
+      height: 298px;
+      margin: auto;
+      text-align: center;
+      font-weight: bold;
+      border: solid 5px #6091d3;/*線*/
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      img{
+        width: 250px;
+        height: 250px;
+      }
+    }
+    
+    .buttons {
+      text-align: center;
+    }
+
+    .buttons li{
+      display: inline-block;
+    }
+
+    .buttons button {
+      font-size: 32px;
+      border: 1px solid #00e8ee;
+      border-radius: 5px;
+      background: none;
+      cursor: pointer;
+      padding: 10px;
+      font-family: "Nico Moji";
+      background: #aceee9;
+      margin-right: 24px;
+      &:hover{
+        color: red;
+      }
+    }
+
+    .result {
+      text-align: center;
+    }
+
+    .result button{
+      font-size: 20px;
+      border: 1px solid #00e8ee;
+      border-radius: 5px;
+      background: none;
+      cursor: pointer;
+      padding: 10px;
+      font-family: "Nico Moji";
+      background: #aceee9;
+      margin-bottom: 20px;
+    }
+
 </style>
